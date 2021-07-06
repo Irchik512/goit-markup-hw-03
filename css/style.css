@@ -7,6 +7,8 @@
     --h-title-color: #000;
     --hero-fot-color: #2f303a;
     --team-color: #f5f4fa;
+    --gradient-color: rgba(47, 48, 58, 0.4);
+    --icon-color:
 }
 
 /* NONE */
@@ -144,24 +146,32 @@ body {
 .contacts-list {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: auto;
 }
 
 .contacts-item:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 .contacts-link {
+    display: flex;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: inherit;
+    
+}
+.contact-icon {
+    fill: currentColor;
+    margin-right: 10px;
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
     color: var(--color-acsent);
+    fill: var(--color-acsent);
 }
 
 /* =================MAIN============= */
@@ -173,8 +183,9 @@ body {
     padding-bottom: 200px;
     text-align: center;
     letter-spacing: 0.06em;
-    background-color: var(--hero-fot-color);
     color: var(--main-fon);
+    background-color: var(--hero-fot-color);
+    background-image:linear-gradient(var(--gradient-color), var(--gradient-color)), url(../imege/hero-fon-s.jpg);
 }
 
 .first-title {
@@ -209,6 +220,14 @@ body {
 
 .advantages-item {
     flex-basis: calc((100% - 120px) / 4);
+}
+.advantage-icon-box{
+    display: flex;
+    justify-content: center;
+    padding: 25px 100px; 
+    margin-bottom: 30px;
+    background-color: var(--team-color);
+    border-radius: 4px;
 }
 
 .advantages-item-title {
@@ -269,8 +288,7 @@ body {
 }
 
 .team-boxes {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px;
 }
 
 .team-item-title {
@@ -285,8 +303,64 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
-    padding-bottom: 30px;
+    margin-bottom: 16px;
 }
+
+.social-list{
+display: flex;
+justify-content: space-between;
+}
+
+.social-link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    border-radius: 50%;
+    color: inherit;
+    background-color: transparent;
+    justify-content: center;
+    align-items:center;
+   
+}
+
+.social-link:hover,
+.social-link:focus {
+   background-color: var(--color-acsent);
+   color: var(--main-fon);
+   fill: var(--main-fon);
+}
+.social-icon{
+    fill: currentColor;
+    justify-content: center;
+}
+
+/* --CLIENT-- */
+.client-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc((100% - 150px) / 6);
+    border: 1px solid #afb1b8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px 31px;
+    color: inherit;
+}
+.client-link:focus,
+.client-link:hover{
+    color: var(--color-acsent);
+    fill: var(--color-acsent);
+    border: 1px solid rgba(33, 150, 243, 1);
+}
+.client-icon {
+    fill: currentColor;
+}
+
 
 /* =================FOOTER=============== */
 
@@ -294,6 +368,11 @@ body {
     background-color: var(--hero-fot-color);
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
 }
 
 .footer .logo {
@@ -330,6 +409,17 @@ body {
     color: var(--main-fon);
 }
 
+.footer-box-title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--main-fon);
+    margin-bottom: 20px;
+}
+.footer .social-link{
+color: var(--main-fon);
+background: rgba(255, 255, 255, 0.1);
+}
 /* ====================2PAGE============ */
 
 /* --PORTFOLIO-- */
@@ -367,7 +457,17 @@ body {
     flex-basis: calc((100% - 90px) / 3);
 }
 
-.portfolio-boxes {
+/* .portfolio-link:hover, */
+.portfolio-link{
+   display: block;
+   }
+
+.portfolio-link:focus,
+.portfolio-link:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+   .portfolio-boxes {
     padding: 20px 24px;
     background: #ffffff;
     border: 1px solid #eeeeee;
